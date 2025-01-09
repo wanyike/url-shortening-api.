@@ -7,7 +7,7 @@ export default function Header() {
         <div className="">
           <img src={logo} alt="" />
           <nav className="">
-            <ul className="">
+            <ul className="flex gap-6">
               <li><button>Features</button></li>
               <li><button>Pricing</button></li>
               <li><button>Resources</button></li>
@@ -15,7 +15,7 @@ export default function Header() {
           </nav>
         </div>
         
-        <ul className="">
+        <ul className="flex">
           <li><button>Login</button></li>
           <li><button className="btn">Sign Up</button></li>
         </ul>
