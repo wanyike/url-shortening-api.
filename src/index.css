@@ -19,6 +19,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.max-width {
+  @apply px-5 lg:max-w-5xl lg:mx-auto xl:max-w-6xl 2xl:px-0;
+}
+
 p {
   line-height: 1.6;
 }
