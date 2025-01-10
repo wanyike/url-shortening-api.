@@ -6,7 +6,7 @@ import logo from "../images/footer-logo.svg"
 
 export default function Footer() {
   return (
-    <div>
+    <div className="">
           <footer className="bg-slate-900 py-9 lg:py-20">
               <div className="max-width grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-5">
            <article>
@@ -16,37 +16,37 @@ export default function Footer() {
           <article>
             <h3 className="text-white text-lg font-bold tracking-wide">Features</h3>
             <ul className="">
-              <li><button className="text-slate-200 text-sm mt-2">Link Shortening</button></li>
-              <li><button className="text-slate-200 text-sm mt-2">Branded Links</button></li>
-              <li><button className="text-slate-200 text-sm mt-2">Analytics</button></li>
+              <li><button className="btn-footer text-slate-200 text-sm mt-2">Link Shortening</button></li>
+              <li><button className="btn-footer text-slate-200 text-sm mt-2">Branded Links</button></li>
+              <li><button className="btn-footer text-slate-200 text-sm mt-2">Analytics</button></li>
             </ul>
           </article>
 
           <article>
             <h3 className="text-white text-lg font-bold tracking-wide">Resources</h3>
             <ul className="">
-              <li><button className="text-slate-200 text-sm mt-2"> Blog</button></li>
-              <li><button className="text-slate-200 text-sm mt-2">Developers</button></li>
-              <li><button className="text-slate-200 text-sm mt-2">Support</button></li>
+              <li><button className="btn-footer text-slate-200 text-sm mt-2"> Blog</button></li>
+              <li><button className="btn-footer text-slate-200 text-sm mt-2">Developers</button></li>
+              <li><button className="btn-footer text-slate-200 text-sm mt-2">Support</button></li>
             </ul>
           </article>
 
           <article>
             <h3 className="text-white text-lg font-bold tracking-wide">Company</h3>
             <ul className="">
-              <li><button className="text-slate-200 text-sm mt-2">About</button></li>
-              <li><button className="text-slate-200 text-sm mt-2">Our Team</button></li>
-              <li><button className="text-slate-200 text-sm mt-2">Careers</button></li>
-              <li><button className="text-slate-200 text-sm mt-2">Contact</button></li>
+              <li><button className="btn-footer text-slate-200 text-sm mt-2">About</button></li>
+              <li><button className="btn-footer text-slate-200 text-sm mt-2">Our Team</button></li>
+              <li><button className="btn-footer text-slate-200 text-sm mt-2">Careers</button></li>
+              <li><button className="btn-footer text-slate-200 text-sm mt-2">Contact</button></li>
             </ul>
           </article>
 
           <article>
             <ul className="flex items-center">
-              <li> <button><img className="" src={facebook} alt="" /></button></li>
-              <li><button><img className="ml-5" src={twitter} alt="" /></button></li>
-              <li><button><img className="ml-5" src={pinterest} alt="" /></button></li>
-              <li><button><img className="mx-5" src={instagram} alt="" /></button></li>
+              <li> <button><img className="btn-footer" src={facebook} alt="" /></button></li>
+              <li><button><img className="btn-footer ml-5" src={twitter} alt="" /></button></li>
+              <li><button><img className="btn-footer ml-5" src={pinterest} alt="" /></button></li>
+              <li><button><img className="btn-footer mx-5" src={instagram} alt="" /></button></li>
             </ul>
           </article>
 

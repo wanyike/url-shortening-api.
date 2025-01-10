@@ -17,7 +17,7 @@ export default function Header() {
         
         <ul className="flex">
           <li><button>Login</button></li>
-          <li><button className="btn">Sign Up</button></li>
+          <li><button className="start">Sign Up</button></li>
         </ul>
       </header>
     </> 
