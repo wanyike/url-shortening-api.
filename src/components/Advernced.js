@@ -15,20 +15,20 @@ export default function Advernced() {
 
                   <div className=" relative card grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mb-10">
                       <div className="line"></div>
-                  <article className="bg-white p-5 rounded relative">
+                  <article className="bg-white p-5 rounded relative h-60">
                       <img src={brand} alt="" className="p-3 -mt-12 bg-slate-800 rounded-full" />
                       <h3 className="text-slate-800 text-lg mb-3 mt-5 font-bold">Brand Recognition</h3>
                       <p className="text-slate-400 text-sm">Boost your brand recognition with each click. Generic links don’t 
                       mean a thing. Branded links help instil confidence in your content.</p>
                   </article>
 
-                  <article className="bg-white p-5 rounded relative">
+                  <article className="bg-white p-5 rounded relative h-60">
                       <img src={records} alt="" className="p-3 -mt-12 bg-slate-800 rounded-full" />
                       <h3 className="text-slate-800 text-lg mb-3 mt-5 font-bold">Detailed Records</h3>
                       <p className="text-slate-400 text-sm"> Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
                   </article>
 
-                  <article className="bg-white p-5 rounded relative">
+                  <article className="bg-white p-5 rounded relative h-60">
                       <img src={fully} alt="" className="p-3 -mt-12 bg-slate-800 rounded-full" />
                       <h3 className="text-slate-800 text-lg mb-3 mt-5 font-bold"> Fully Customizable</h3>
                       <p className="text-slate-400 text-sm">Improve brand awareness and content discoverability through customizable 

@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <div className="">
           <footer className="bg-slate-900 py-9 lg:py-20">
-              <div className="max-width grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-5">
+              <div className="footer max-width grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-5">
            <article>
             <img className="" src={logo} alt="" />
           </article>
