@@ -3,7 +3,8 @@ import bgDesktop from "../images/bg-boost-desktop.svg"
 
 export default function Boost() {
   return (
-      <>
+    <>
+      
       <section className="boost relative">
         <picture className="">
           <source media="(min-width: 768px)" srcSet={bgDesktop} />
@@ -14,7 +15,7 @@ export default function Boost() {
         <button className="start">Get Started</button>
         </div>
           </section>
-      
+ 
     </>
   )
 }

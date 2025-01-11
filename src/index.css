@@ -32,7 +32,23 @@ body {
   height: 17.188rem;
 }
 
+.shortener {
+  background-color: hsl(257, 27%, 26%);
+  height: 17.188rem;
+  border-radius: 8px;
+}
 
+.shortener img {
+  height: 17.188rem;
+  @apply w-full rounded-lg;
+}
+
+.shortener .from {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+}
 
 .boost img {
   height: 17.188rem;
@@ -41,6 +57,14 @@ body {
 
 .btn-nav:hover {
 color: hsl(260, 8%, 14%);
+}
+
+.shortener-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
 }
 
 .boost .boost-inner {
@@ -52,6 +76,10 @@ color: hsl(260, 8%, 14%);
 
 .start {
   @apply bg-cyan-500 py-1 px-4 rounded-full text-white hover:opacity-75 transition-all duration-150 cursor-pointer;
+}
+
+.shorten-btn {
+  @apply bg-cyan-500 py-1 px-4 rounded-lg text-white hover:opacity-75 transition-all duration-150 cursor-pointer;
 }
 
 .btn-footer {
