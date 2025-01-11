@@ -32,9 +32,15 @@ body {
   height: 17.188rem;
 }
 
+
+
 .boost img {
   height: 17.188rem;
   @apply w-full;
+}
+
+.btn-nav:hover {
+color: hsl(260, 8%, 14%);
 }
 
 .boost .boost-inner {
