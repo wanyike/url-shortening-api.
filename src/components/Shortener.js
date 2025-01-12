@@ -14,8 +14,8 @@ export default function Shortener() {
    <div className="shortener-inner">
         <form className="form">
           <div className="flex flex-col md:flex-row mb-4">
-            <input className="w-full py-6 px-5 mb-2 md:mb-0 rounded-lg" type="url" placeholder="Shorten a link here" />
-            <button className="shorten-btn py-4 rounded-lg  md:w-40 md:ml-5" type="submit">
+            <input className="w-full py-3 px-5 mb-2 md:mb-0 rounded-lg" type="url" placeholder="Shorten a link here" />
+            <button className="shorten-btn py-3 rounded-lg  md:w-40 md:ml-5" type="submit">
               Shorten it!
             </button>
           </div>
