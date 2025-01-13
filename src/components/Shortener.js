@@ -3,15 +3,26 @@ import { useState} from "react";
 import bgMobile from "../images/bg-shorten-mobile.svg";
 import bgDesktop from "../images/bg-shorten-desktop.svg";
 
-// https://api.shrtco.de/v2/shorten?url=
+// 
 
 
 export default function Shortener() {
   const [text, setText] = useState("")
+ const [link, setLinks] = useState([])
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!text) {
       alert("Input is required")
+    } else {
+      const shortenLink = async () => {
+        const res = await fetch('https://api.shrtco.de/v2/shorten?url=${text}')
+        const data = await res.json()
+        console.log(data)
+        setLinks(data.result)
+        setText("")
+      }
+      shortenLink()
     }
   }
 
