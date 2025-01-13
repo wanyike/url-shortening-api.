@@ -14,7 +14,8 @@ export default function Shortener() {
       return;
     }
   
-    const apiUrl = `https://api.shrtco.de/v2/shorten?url=${text}`;
+    const apiUrl = `https://cors-anywhere.herokuapp.com/https://api.shrtco.de/v2/shorten?url=${text}`
+;
   
     try {
       const response = await fetch(apiUrl);
