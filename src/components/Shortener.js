@@ -3,44 +3,35 @@ import bgMobile from "../images/bg-shorten-mobile.svg";
 import bgDesktop from "../images/bg-shorten-desktop.svg";
 
 export default function Shortener() {
-  const [text, setText] = useState("");
+  const [value, setValue] = useState("");
+  // const [text, setText] = useState("");
+  const handleSubmit = () => {
+    setValue("New Value");
+    return <button onClick={handleSubmit}>Submit</button>;
+  };
   const [links, setLinks] = useState([]);
 
-  const handleSubmit = async (e) => {
+  // const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if (!text) {
+    if (!state) {
       alert("Please enter a valid URL.");
-      return;
     }
-  
-    const apiUrl = `https://cors-anywhere.herokuapp.com/https://api.shrtco.de/v2/shorten?url=${text}`
-;
-  
-    try {
-      const response = await fetch(apiUrl);
-  
-      if (!response.ok) {
-        throw new Error(`HTTP Error: ${response.status}`);
+    else {
+      
+      const shortenLink = async () => {
+        const res = await fetch(`https://domain.com/target/url=${state}`)
+        const data = await res.json()
+        console.log(data)
       }
-  
-      const data = await response.json();
-      console.log("Shortened URL:", data.result.full_short_link);
-  
-      setLinks((prevLinks) => [
-        ...prevLinks,
-        { original: text, short: data.result.full_short_link },
-      ]);
-  
-      setText(""); // Clear the input field
-    } catch (error) {
-      console.error("Error:", error.message);
-      alert("Failed to shorten the link. Please try again.");
-    }
-  };
-  
 
-  return (
+      Shortener()
+  } 
+    
+  
+  
+  return <div>{
+ 
     <>
       <section className="max-width shortener relative">
         <div className="">
@@ -53,8 +44,8 @@ export default function Shortener() {
         <form className="form" onSubmit={handleSubmit}>
           <div className="flex flex-col md:flex-row mb-4">
                 <input className="w-full py-3 px-5 mb-2 md:mb-0 rounded-lg" type="url" placeholder="Shorten a link here"
-                  value={text}
-                  onChange={(e) => setText(e.target.value)}
+                  value={state}
+                  onChange={(e) => setState(e.target.value)}
                 />
                 <button className="shorten-btn py-3 rounded-lg  md:w-40 md:ml-5"
                   onClick={handleSubmit}
@@ -85,5 +76,6 @@ export default function Shortener() {
           </div>
       </section>
     </>
-  );
+    
+  }</div>;
 }
