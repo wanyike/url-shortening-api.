@@ -1,6 +1,6 @@
 import styles from "./ShortenedLinksList.module.css";
 import { useShortener } from "../../../hooks/useShortener";
-import ShortenLink from "../../../ShortenLink";
+import ShortenLink from "./ShortenLink";
 import { AnimatePresence, Reorder } from "motion/react";
 import { useRef } from "react";
 

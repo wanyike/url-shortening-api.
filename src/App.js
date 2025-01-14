@@ -3,7 +3,7 @@ import Footer from "./components/Footer"
 import Boost from "./components/Boost"
 import Advernced from "./components/Advernced"
 // import Shortener from "./components/Shortener"
-import features from ""
+import CopyButton from "./features/CopyButton";
 import Showcase from "./components/Showcase";
 
 export default 
@@ -12,7 +12,7 @@ function App() {
     <>   
       <Header />
       <Showcase />
-      {/* <features /> */}
+      <CopyButton />
       {/* <Shortener /> */}
       <Advernced />
       <Boost />
