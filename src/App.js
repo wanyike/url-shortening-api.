@@ -5,6 +5,7 @@ import Advernced from "./components/Advernced"
 // import Shortener from "./components/Shortener"
 import CopyButton from "./features/CopyButton";
 import Showcase from "./components/Showcase";
+import LinkShortenerForm from "./features/LinkShortenerForm";
 
 export default 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <>   
       <Header />
       <Showcase />
+      <LinkShortenerForm />
       <CopyButton />
       {/* <Shortener /> */}
       <Advernced />
