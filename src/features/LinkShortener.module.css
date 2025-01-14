@@ -1,0 +1,6 @@
+.shotener__container {
+  background-image: linear-gradient(
+    var(--clr-white) 50%,
+    var(--clr-gray-50) 50%
+  );
+}
