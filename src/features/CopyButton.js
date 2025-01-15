@@ -27,6 +27,7 @@ const CopyButton = ({ text }) => {
       className={`${styles.button} ${isCopied && styles["button--copied"]}`}
       type="button"
       disabled={isCopied}
+    
     >
       {isCopied ? "Copied!" : "Copy"}
     </button>

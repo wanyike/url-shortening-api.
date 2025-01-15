@@ -15,7 +15,7 @@ const LinkShortenerForm = () => {
   const onSubmit = ({ link }) => {
     shortenLink(link);
   }
-
+  
   return (
     <>
              <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
