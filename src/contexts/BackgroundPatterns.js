@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "./BackgroundPatterns.module.css";
+// import styles from "./BackgroundPatterns.module.css";
 
 export const ShortenPattern = ({ className, ...props }) => {
   return (
@@ -8,7 +8,7 @@ export const ShortenPattern = ({ className, ...props }) => {
         xmlns="http://www.w3.org/2000/svg"
         width={237}
         height={128}
-        className={`${styles["shorten-pattern--mobile"]} ${className}`}
+        // className={`${styles["shorten-pattern--mobile"]} ${className}`}
         {...props}
       >
         <path
@@ -23,7 +23,7 @@ export const ShortenPattern = ({ className, ...props }) => {
         width="1110"
         height="168"
         viewBox="0 0 1110 168"
-        className={`${styles["shorten-pattern--desktop"]} ${className}`}
+        // className={`${styles["shorten-pattern--desktop"]} ${className}`}
         {...props}
       >
         <path
@@ -47,7 +47,7 @@ export const BoostPattern = ({ className, ...props }) => {
         width="375"
         height="300"
         viewBox="0 0 375 300"
-        className={`${styles["boost-pattern--mobile"]} ${className}`}
+        // className={`${styles["boost-pattern--mobile"]} ${className}`}
         {...props}
       >
         <g fill="#4b3f6b" fillRule="evenodd">
@@ -60,7 +60,7 @@ export const BoostPattern = ({ className, ...props }) => {
         width="1440"
         height="250"
         viewBox="0 0 1440 250"
-        className={`${styles["boost-pattern--desktop"]} ${className}`}
+        // className={`${styles["boost-pattern--desktop"]} ${className}`}
         {...props}
       >
         <g fill="#4b3f6b" fillRule="evenodd">

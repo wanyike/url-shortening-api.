@@ -8,10 +8,10 @@ import CopyButton from "./features/CopyButton";
 import Showcase from "./components/Showcase";
 // import LinkShortenerForm from "./features/LinkShortenerForm";
 import ShortenButton from "./features/ShortenButton";
-import BackgroundPatterns from "./contexts/BackgroundPatterns";
+// import BackgroundPatterns from "./contexts/BackgroundPatterns";
 
 
-import { BoostPattern, ShortenPattern } from "./contexts/BackgroundPatterns";
+import { ShortenPattern } from "./contexts/BackgroundPatterns";
 
 export default 
 function App() {
@@ -20,10 +20,10 @@ function App() {
       <Header />
       <Showcase />
       <div>
-      <BoostPattern  />
+    
       <ShortenPattern  />
     </div>
-      <BackgroundPatterns />
+      {/* <BackgroundPatterns /> */}
       {/* <LinkShortenerForm /> */}
       <ShortenButton />
       <CopyButton />
