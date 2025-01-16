@@ -1,5 +1,4 @@
-import styles from "./LinkShortenerForm"; 
-import { BgShortenPattern } from "../features/BackgroundPatterns";
+
 import ShortenButton from "../features/ShortenButton";
 import { validateUrl } from "./ValidateUrl";
 import { useShortener } from "../features/UseShortener";
@@ -18,13 +17,11 @@ const LinkShortenerForm = () => {
   
   return (
     <>
-             <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-          <div className={styles["form__input-container"]}>
+             <form className= "" onSubmit={handleSubmit(onSubmit)}>
+          <div className={["form__input-container"]}>
             <input
               type="text"
-              className={`${styles.form__input} ${
-                errors.link && styles["form__input--error"]
-              }`}
+              className=""
               placeholder="Shorten a link here..."
               {...register("link", {
                 required: "Please add a link",
@@ -42,7 +39,7 @@ const LinkShortenerForm = () => {
             <ShortenButton type="submit" disabled={isLoading} />
           </div>
         </form>
-        <BgShortenPattern className={styles.form__background} />     
+            
     </>
   );
 };

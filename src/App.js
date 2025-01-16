@@ -6,7 +6,7 @@ import Advernced from "./components/Advernced"
 // import Shortener from "./components/Shortener"
 import CopyButton from "./features/CopyButton";
 import Showcase from "./components/Showcase";
-// import LinkShortenerForm from "./features/LinkShortenerForm";
+import LinkShortenerForm from "./features/LinkShortenerForm";
 import ShortenButton from "./features/ShortenButton";
 // import BackgroundPatterns from "./contexts/BackgroundPatterns";
 
@@ -24,7 +24,7 @@ function App() {
       <ShortenPattern  />
     </div>
       {/* <BackgroundPatterns /> */}
-      {/* <LinkShortenerForm /> */}
+      <LinkShortenerForm />
       <ShortenButton />
       <CopyButton />
       {/* <Shortener /> */}
