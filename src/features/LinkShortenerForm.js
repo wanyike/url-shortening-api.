@@ -1,7 +1,7 @@
 
-import ShortenButton from "../features/ShortenButton";
-import { validateUrl } from "./ValidateUrl";
-import { useShortener } from "../features/UseShortener";
+// import ShortenButton from "./features/ShortenButton";
+// import { validateUrl } from "./ValidateUrl";
+// import { useShortener } from "./features/UseShortener";
 
 const LinkShortenerForm = () => {
   const {
@@ -10,9 +10,9 @@ const LinkShortenerForm = () => {
     formState: { errors },
   } = ({ mode: "onTouched" });
 
-  const { shortenLink, isLoading } = useShortener();
+  // const { shortenLink, isLoading } = useShortener();
   const onSubmit = ({ link }) => {
-    shortenLink(link);
+    // shortenLink(link);
   }
   
   return (
@@ -25,10 +25,10 @@ const LinkShortenerForm = () => {
               placeholder="Shorten a link here..."
               {...register("link", {
                 required: "Please add a link",
-                validate: {
-                  validUrl: (value) =>
-                    validateUrl(value) || "Please enter a valid URL",
-                },
+                // validate: {
+                //   validUrl: (value) =>
+                //     validateUrl(value) || "Please enter a valid URL",
+                // },
               })}
               aria-invalid={errors.link ? "true" : "false"}
             />
@@ -36,7 +36,10 @@ const LinkShortenerForm = () => {
           </div>
 
           <div>
-            <ShortenButton type="submit" disabled={isLoading} />
+          {/* <ShortenButton type="submit" disabled=
+            
+            // {isLoading}
+          /> */}
           </div>
         </form>
             
