@@ -41,7 +41,7 @@ export default function Shortener() {
    <div className="shortener-inner">
         <form className="form" onSubmit={handleSubmit}>
           <div className="flex flex-col md:flex-row mb-4">
-                <input className="w-full py-3 px-5 mb-2 md:mb-0 rounded-lg" type="text" placeholder="Shorten a link here"
+                <input className="w-full py-2 px-5 mb-2 md:mb-0 rounded-lg" type="text" placeholder="Shorten a link here"
                   value={state}
                   onChange={handleInputChange}
                   // onChange={(e) => setState(e.target.value)}
