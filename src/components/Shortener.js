@@ -3,34 +3,30 @@ import bgMobile from "../images/bg-shorten-mobile.svg";
 import bgDesktop from "../images/bg-shorten-desktop.svg";
 
 export default function Shortener() {
-  const [state, setState] = useState("");
   const [text, setText] = useState("");
-  const handleSubmit = () => {
-    // setValue("New Value");
-    return <button onClick={handleSubmit}>Submit</button>;
-  };
-  const [links] = useState([]);
+  const[links, setLinks] = useState([])
 
-  // const handleSubmit = async (e) => {
-  // e.preventDefault();
-  // setState(e.target.value);
-  const handleInputChange = (e) => {
-    setState(e.target.value); 
-  };
-  //   if (!state) {
-  //     alert("Please enter a valid URL.");
-  //   }
-  //   else {
-      
+  const handleSubmit = (e) => {
+    e.preventDefault();
+        
+    if (!text) {
+      alert("Please enter a valid URL.");
+    }
+    else {
+      const shortenLink = async () => {
+        const res = await fetch(`https://cors-anywhere.herokuapp.com/https://api.shrtco.de/v2/shorten?url=${text}`)
+        const data = await res.json()
+        console.long(data.result)
+        setLinks(data.result)
+        setText("")
+      }
+      shortenLink()
+    }
+  }   
 
-  //     Shortener()
-  // } 
-    
-  
-  
+
   return <div>{
- 
-    <>
+     <>
       <section className="max-width shortener relative">
         <div className="">
         <picture className="">
@@ -41,11 +37,11 @@ export default function Shortener() {
    <div className="shortener-inner">
         <form className="form" onSubmit={handleSubmit}>
           <div className="flex flex-col md:flex-row mb-4">
-                <input className="w-full py-2 px-5 mb-2 md:mb-0 rounded-lg" type="text" placeholder="Shorten a link here"
-                  value={state}
-                  onChange={handleInputChange}
-                  // onChange={(e) => setState(e.target.value)}
+                <input className="w-full py-2 px-5 mb-2 md:mb-0 rounded-lg" type="url" placeholder="Shorten a link here"
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
                 />
+
                 <button className="shorten-btn py-3 rounded-lg  md:w-40 md:ml-5"
                   onClick={handleSubmit}
                   type="submit">
