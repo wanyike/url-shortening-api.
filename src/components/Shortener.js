@@ -16,7 +16,7 @@ export default function Shortener() {
       const shortenLink = async () => {
         const res = await fetch(`https://cors-anywhere.herokuapp.com/https://api.shrtco.de/v2/shorten?url=${text}`)
         const data = await res.json()
-        console.long(data.result)
+        console.log(data.result)
         setLinks(data.result)
         setText("")
       }
