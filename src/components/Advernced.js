@@ -5,7 +5,7 @@ import fully from "../images/icon-fully-customizable.svg"
 export default function Advernced() {
   return (
       <>
-          <section className="bg-gray-300 py-10 lg:pt-20 lg:pb-40">
+          <section className="bg-gray-200 pt-20 pb-10 lg:pt-20 lg:pb-40">
               <div className="max-width">
               <h2 className="text-4xl font-bold text-slate-800 mb-4 text-center">Advanced Statistics</h2>
               <p className="text-slate-400 text-center mb-9 lg:mb-19">
