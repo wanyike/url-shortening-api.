@@ -51,13 +51,14 @@ export default function Shortener() {
           </form>
           </div>
 
-          <div className="flex items-center md:flex-row md:justify-between flex-col bg-white justify-center">
+          <div className="flex items-center md:flex-row md:justify-between flex-col bg-white justify-center p-3">
             <article>
-              <h6 className="mb-7 md:mb-0">{links.original_link}</h6>
+              <h6 className="mb-3 md:mb-0">{links.original_link}</h6>
             </article>
+
             <article>
-              <ul className="">
-                <li className="">
+              <ul className="md:flex flex items-center">
+                <li className="md:mr-5 mr-5">
                   <button className="text-cyan-500">{links.full_short_link}</button>
                 </li>
 
