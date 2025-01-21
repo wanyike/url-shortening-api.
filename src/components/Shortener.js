@@ -51,7 +51,7 @@ export default function Shortener() {
           </form>
           </div>
 
-          <div className="flex items-center md:flex-row md:justify-between flex-col bg-white justify-center p-3">
+          <div className="flex items-center md:flex-row md:justify-between flex-col bg-white justify-center p-3 mt-2">
             <article>
               <h6 className="mb-3 md:mb-0">{links.original_link}</h6>
             </article>
