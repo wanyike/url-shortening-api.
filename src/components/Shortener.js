@@ -9,12 +9,14 @@ export default function Shortener() {
   const handleSubmit = (e) => {
     e.preventDefault();
         
+
     if (!text) {
       alert("Please enter a valid URL.");
+
     }
     else {
       const shortenLink = async () => {
-        const res = await fetch(`https://cors-anywhere.herokuapp.com/https://api.shrtco.de/v2/shorten?url=${text}`)
+        const res = await fetch(`https://cors-anywhere.herokuapp.com/shorten?url=${text}`)
         const data = await res.json()
         console.log(data.result)
         setLinks(data.result)
@@ -23,7 +25,7 @@ export default function Shortener() {
       shortenLink()
     }
   }   
-
+ const handleCopy = () => navigator.clipboard.writeText(links.full_short_link)
 
   return <div>{
      <>
@@ -63,7 +65,7 @@ export default function Shortener() {
                 </li>
 
                 <li className="">
-                <button className="shorten-btn text-sm">copy</button>
+                <button onClick={handleCopy} className="shorten-btn text-sm">copy</button>
                   </li>
               </ul>
             </article>
