@@ -4,7 +4,8 @@ import bgDesktop from "../images/bg-shorten-desktop.svg";
 
 export default function Shortener() {
   const [text, setText] = useState("");
-  const[links, setLinks] = useState([])
+  const [links, setLinks] = useState([])
+  const [buttonText, setButtonText] = useState("Copy")
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,7 +26,10 @@ export default function Shortener() {
       shortenLink()
     }
   }   
- const handleCopy = () => navigator.clipboard.writeText(links.full_short_link)
+  const handleCopy = () => {
+    navigator.clipboard.writeText(links.full_short_link)
+    setButtonText("Copied!")
+ }
 
   return <div>{
      <>
@@ -65,7 +69,7 @@ export default function Shortener() {
                 </li>
 
                 <li className="">
-                <button onClick={handleCopy} className="shorten-btn text-sm">copy</button>
+                <button onClick={handleCopy} className="shorten-btn text-sm">{buttonText}</button>
                   </li>
               </ul>
             </article>
