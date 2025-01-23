@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import bgMobile from "../images/bg-shorten-mobile.svg";
 import bgDesktop from "../images/bg-shorten-desktop.svg";
 
+const getLocalStorage = () => {
+  let links = localStorage.getItem("links")
+
+  if (links) {
+  return JSON.parse(localStorage.getItem("links"))
+}
+  else {
+    return[]
+ }
+}
+
 export default function Shortener() {
   const [text, setText] = useState("");
-  const [links, setLinks] = useState([])
+  const [links, setLinks] = useState(getLocalStorage())
   const [buttonText, setButtonText] = useState("Copy")
 
   const handleSubmit = (e) => {
@@ -30,6 +41,11 @@ export default function Shortener() {
     navigator.clipboard.writeText(links.full_short_link)
     setButtonText("Copied!")
  }
+
+  useEffect(() => {
+  localStorage.setItem("links", JSON.stringify(links))
+}, [links])
+  
 
   return <div>{
      <>
@@ -69,7 +85,7 @@ export default function Shortener() {
                 </li>
 
                 <li className="">
-                <button onClick={handleCopy} className="shorten-btn text-sm">{buttonText}</button>
+                <button onClick={handleCopy} className="shorten-btn text-sm focus:bg-slate-800">{buttonText}</button>
                   </li>
               </ul>
             </article>
