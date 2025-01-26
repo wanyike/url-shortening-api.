@@ -4,7 +4,6 @@ import bgDesktop from "../images/bg-shorten-desktop.svg";
 
 const getLocalStorage = () => {
   let links = localStorage.getItem("links")
-
   if (links) {
   return JSON.parse(localStorage.getItem("links"))
 }
@@ -18,35 +17,66 @@ export default function Shortener() {
   const [links, setLinks] = useState(getLocalStorage())
   const [buttonText, setButtonText] = useState("Copy")
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
         
-
-    if (!text) {
-      alert("Please enter a valid URL.");
-
-    }
-    else {
-      const shortenLink = async () => {
-        const res = await fetch(`https://cors-anywhere.herokuapp.com/shorten?url=${text}`)
-        const data = await res.json()
-        console.log(data.result)
-        setLinks(data.result)
-        setText("")
-      }
-      shortenLink()
-    }
-  }   
+//    if (!text) {
+//       alert("Please enter a valid URL.");
+//     }
+//     else {
+//       const shortenLink = async () => {
+//         const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${text}`)
+//         const data = await res.json()
+//         console.log(data.result)
+//         setLinks(data.result)
+//         setText("")
+//       }
+//       shortenLink()
+//     }
+  //   }
+  
   const handleCopy = () => {
     navigator.clipboard.writeText(links.full_short_link)
     setButtonText("Copied!")
  }
 
+  // copy code
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    if (!text) {
+      alert("Please enter a valid URL.");
+      return;
+    }
+  
+    try {
+      const res = await fetch('https://www.newsapi.ai/api/search?q=technology&from=2022-01-01&to=2022-01-31');
+      const data = await res.json();
+  
+      if (data.ok) {
+        setLinks({
+          original_link: data.result.original_link,
+          full_short_link: data.result.full_short_link,
+        });
+        setText("");
+      } else {
+        alert("Error: " + data.error);
+      }
+    } catch (error) {
+      alert("Failed to shorten the link. Please try again.");
+      console.error(error);
+    }
+  };
+  
+
+
+  // copy copied
+  
   useEffect(() => {
   localStorage.setItem("links", JSON.stringify(links))
 }, [links])
   
-
   return <div>{
      <>
       <section className="max-width shortener relative">
