@@ -88,11 +88,11 @@ export default function Shortener() {
           
    <div className="shortener-inner">
         <form className="form" onSubmit={handleSubmit}>
-          <div className="flex flex-col md:flex-row mb-4">
-                <input className="w-full py-2 px-5 mb-2 md:mb-0 rounded-lg" type="url" placeholder="Shorten a link here"
+          <div className="flex flex-col md:flex-row mb-4 mt-4">
+                <input className="w-full py-1 px-5 mb-2 md:mb-0 rounded-lg" type="url" placeholder="Shorten a link here"
                   value={text}
                   onChange={(e) => setText(e.target.value)}
-                />
+                /> 
 
                 <button className="shorten-btn py-3 rounded-lg  md:w-40 md:ml-5"
                   onClick={handleSubmit}
