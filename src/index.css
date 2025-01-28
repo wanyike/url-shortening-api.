@@ -34,12 +34,12 @@ body {
 
 .shortener {
   background-color: hsl(257, 27%, 26%);
-  height: 7.188rem;
+  height: 6.188rem;
   border-radius: 8px;
 }
 
 .shortener img {
-  height: 7.188rem;
+  height: 6.188rem;
   @apply w-full rounded-lg;
 }
 
