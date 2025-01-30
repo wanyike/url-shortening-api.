@@ -9,13 +9,13 @@ export default function Footer() {
     <div className="">
           <footer className="bg-slate-900 py-9 lg:py-20">
               <div className="footer max-width grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-5">
-           <article>
+           <article className="md:mb-32">
             <img className="" src={logo} alt="" />
           </article>
           
           <article>
             <h3 className="text-white text-lg font-bold tracking-wide">Features</h3>
-            <ul className="">
+            <ul className="md:mb-12">
               <li><button className="btn-footer text-slate-200 text-sm mt-2">Link Shortening</button></li>
               <li><button className="btn-footer text-slate-200 text-sm mt-2">Branded Links</button></li>
               <li><button className="btn-footer text-slate-200 text-sm mt-2">Analytics</button></li>
@@ -24,7 +24,7 @@ export default function Footer() {
 
           <article>
             <h3 className="text-white text-lg font-bold tracking-wide">Resources</h3>
-            <ul className="">
+            <ul className="md:mb-12">
               <li><button className="btn-footer text-slate-200 text-sm mt-2"> Blog</button></li>
               <li><button className="btn-footer text-slate-200 text-sm mt-2">Developers</button></li>
               <li><button className="btn-footer text-slate-200 text-sm mt-2">Support</button></li>
@@ -42,7 +42,7 @@ export default function Footer() {
           </article>
 
           <article>
-            <ul className="flex items-center">
+            <ul className="flex items-center md:mb-24">
               <li> <button><img className="btn-footer" src={facebook} alt="" /></button></li>
               <li><button><img className="btn-footer ml-5" src={twitter} alt="" /></button></li>
               <li><button><img className="btn-footer ml-5" src={pinterest} alt="" /></button></li>
