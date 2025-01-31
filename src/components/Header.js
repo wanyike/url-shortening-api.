@@ -10,7 +10,7 @@ export default function Header() {
           <img src={logo} alt="" />
 
 <nav className="hidden md:block md:ml-4">
-  <ul className="md:flex items-start justify-start ml-5">
+  <ul className="md:flex items-start justify-start ml-16">
     <li className="my-4 md:my-0 md:mr-5"><button className="btn-nav text-slate-400 font-bold">Features</button></li>
     <li className="my-4 md:my-0 md:mr-5"><button className="btn-nav text-slate-400 font-bold">Pricing</button></li>
     <li><button className="btn-nav text-slate-400 font-bold">Resources</button></li>
