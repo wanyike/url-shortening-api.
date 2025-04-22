@@ -20,7 +20,7 @@ body {
 }
 
 .max-width {
-  @apply px-7 lg:max-w-5xl lg:mx-auto xl:max-w-6xl 2xl:px-0; 
+ @apply px-7 lg:max-w-5xl lg:mx-auto xl:max-w-6xl 2xl:px-0; 
 }
 
 .footer {
@@ -29,7 +29,7 @@ body {
 
 .boost {
   background-color: hsl(257, 27%, 26%);
-  height: 17.188rem;
+  height: 16.188rem;
 }
 
 .shortener {
@@ -51,7 +51,7 @@ transform: translate(-50%, -50%);
 }
 
 .boost img {
-  height: 17.188rem;
+  height: 15.188rem;
   @apply w-full;
 }
 
