@@ -59,6 +59,10 @@ transform: translate(-50%, -50%);
 color: hsl(260, 8%, 14%);
 }
 
+.btn-footer:hover {
+  color: hsl(180, 100%, 50%);
+  }
+
 .shortener-inner {
   position: absolute;
   top: 50%;
